@@ -1,122 +1,126 @@
-//[1,2,3] = Array
-//1,2,3 = index and 1 is index = 0 
+//.include()
+const fruits = ["Apple", "Banana", "Orange"];
+console.log(fruits.includes("Banana"));//output: true
+console.log(fruits.includes("Mango"));//output: false
 
-//exercise(3.3)
-let originalArray = [1, 2, 3];
+//.indexof()
+const fruits = ["Apple", "Banana", "Orange"];
+console.log(fruits.indexOf("Banana")); // output: 1
+console.log(fruits.indexOf("Mango"));// output: -1
 
-let nestedArray = [originalArray, originalArray, originalArray];
-let nestedArray = [[1, 2, 3], [1, 2, 3], [1, 2, 3]];
+//.join()
+const fruits = ["Apple", "Banana", "Orange"];
+const result = fruits.join(",");
+console.log(result); //output: "Apple , Banana , Orange"
 
-console.log(nestedArray[0][1]);
-output
-2
+//.reverse()
+const numbers = [1, 2, 3];
+numbers.reverse();
+console.log(numbers); //output: [3,2,1]
 
-//array = 0,1,2,3
-//object = color , weight, breed
+//.sort()
+const number = [3, 1, 4, 2];
+number.sort();
+console.log(numbers); // output: [1,2,3,4]
 
-typeof arr(Object)
+//.slice()
+const fruits = ["Apple", "Banana", "Orange", "Mango"];
+const sliced = fruits.slice(1, 3);
+console.log(sliced); // output: ["Banana" , "Mango"]
+console.log(fruits); //output:["Apple" , "Banana" , "Orange" , "Mango"];
 
-let dog = {
-    dogName: "JavaScript",
-    weight: 2.4,
-    color: "brown",
-    breed: "chihuahua",
-    age: 3,
-    burglarBiter: true
-};
+//.spilce()
+const fruits = ["Apple", "Banana", "Orange"];
+fruits.splice(1, 1, "Mango");
+console.log(fruits); // output: ["Apple" , "Mango" , "Orange"]
 
-let dog = { color: "brown", age: 3 };
-console.log(dog.color);
+//.concat()
+const arr1 = [1, 2];
+const arr2 = [3, 4];
+const combined = arr1.concat(arr2);
+console.log(combined); // output [1,2,3,4]
 
-let variable = "color";
-console.log(dog[variable]);
+//.forEach()
+const numbers = [1, 2, 3];
+numbers.forEachEach(function (num) {
+    console.log(num * 2);
+});
+output: 2, 4, 6
 
-let variable = "age";
-console.log(dog[variable]);
+//.map()
+const numbers = [1, 2, 3];
+const doubled = numbers.map(function (num) {
+    num * 2;
+});
+console.log(doubled);
+output: [2, 4, 6]
 
-//exercise 3.4
-let myCar =
+//.filter()
+const ages = [15, 22, 18, 30, 12];
+const adults = ages.filter(finction(age)
 {
-    make: "toyata",
-    model: "Corolla",
-    year: 2022,
-    color: "silver",
-    forsale: false
-};
-
-let variable = "color";
-myCar[variable] = "red";
-
-variable = "forsale";
-myCar[variable] = "true";
-
-console.log("Make", myCar.make);
-console.log("Model", myCar.Model);
-console.log("For Sale:", myCar.forSale);
+        return age >= 18;
+    });
+console.log(adults);
+output: [22, 18, 30]
 
 
-//Working with objects and arrays
-//exercise 3.5
-let people = { friends: [] };
-let friend1 = {
-    firstName: "Aung",
-    lastName: "Kyaw",
-    id: 1
-}
-people.friends.push(friend1, friend2, friend3);
-console.log(people);
+    .find()
+const numbers = [4, 9, 16, 25];
+const found = numbers.find(function (num) {
+    return num > 10;
+});
+console.log(found);
+output: 16
 
-//
-["FIRST", "SVEKIS", "MIDDLE", "hello World", "LAST"]
+//.every()
+const scores = [80, 90, 85];
+const allPassed = scores.every(function (score) {
+    return score >= 50;
+});
+output: true
 
-myArray.shift();
-myArray.pop();
-["SVEKIS", "MIDDLE", "hello World"]
+//.some()
+const scores = [40, 30, 50];
+const hasPasses = scores.some(function (score) {
+    return score >= 50;
+});
+console.log(hasPassed);
+output: true
 
-myArray.unshift("First");
-["First", "SVEKIS", "MIDDLE", "hello World"]
+//.reduce()
+const numbers = [1, 2, 3, 4, 5];
+const sum = numbers.reduce(function (total, num) {
+    return total + sum;
+});
+console.log(num);
+output: 10
 
-myArray[3] = "hello world";
-myArray[2] = "MIDDLE";
-
-myArray.push("LAST");
-
-console.log(myArray);
-
-//const myArr1 = [1,3,5,6,8,9,15];
-console.log(myArr1.indexOf(0));
-console.log(myArr1.indexOf(3));
-PS: [] array
-    () CSSMathValue
+//.shift()
+const fruits = ["Apple", "Banana", "Orange"];
+fruits.shift();
+console.log(fruits);
 output
-array[-1]
-array[1]
+["Banana", "Orange"]
 
-//[1,3,5,6,8,9,15]
-myArr[1] = 4;
 
-//const myArr2 = [];
-myArr2[10] = 'test'
-console.log(myArr2);
-console.log(myArr2[2]);
-console
-console.log(myArr2);[< 10 empty items >, 'test']
-length = 11
-console.log(myArr2[2]); undefined
-
-//const myArr3 = [3,6,8,9,55,553,434];
-myArr3.sort();
-myArr3.length = 0;
-console.log(myArr3[0]);
-
+//.unshift()
+const fruits = ["Apple", "Banana", "Orange"];
+fruits.unshift("Apple");
+console.log(fruits);
 output
-undefined because myArr3.length = 0;
+["Apple", "Banana", "Orange"]
 
+//.push()
+const fruits = ["Apple", "Banana"];
+fruits.push("Orange");
+console.log(fruits);
+output
+["Apple", "Banana", "Orange"]
 
-
-
-
-
-
-
-
+//.pop()
+const fruits = ["Apple", "Banana", "Orange"];
+fruits.pop();
+console.log("fruits");
+output
+["Apple", "Banana"]

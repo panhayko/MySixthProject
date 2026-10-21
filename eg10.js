@@ -1,126 +1,66 @@
-//.include()
-const fruits = ["Apple", "Banana", "Orange"];
-console.log(fruits.includes("Banana"));//output: true
-console.log(fruits.includes("Mango"));//output: false
+//while loop
+let i = 0;
+while (i < 10) {
+    console.log(i);
+    i++;
+}
 
-//.indexof()
-const fruits = ["Apple", "Banana", "Orange"];
-console.log(fruits.indexOf("Banana")); // output: 1
-console.log(fruits.indexOf("Mango"));// output: -1
+//let someArray = ["Mike", "Antal", "Marc", "Emir", "Lotus"];
+let notFound = true;
+while (notFound && someArray.length > 0) {
+    if (someArray[0] === "Lotus") {
+        console.log("Found her");
+        notFound = false;
+    }
+    else {
+        SomeArray.shift();
+    }
+}
 
-//.join()
-const fruits = ["Apple", "Banana", "Orange"];
-const result = fruits.join(",");
-console.log(result); //output: "Apple , Banana , Orange"
+//let nr1 = 0;
+let nr2 = 1;
+let temp;
+fibonacciArray = [];
+while (fibonacciArray.Length < 25) {
+    fibonacciArray.push(nr1);
+    temp = nr1 + nr2;
+    nr1 = nr2;
+    nr2 = temp;
+}
 
-//.reverse()
-const numbers = [1, 2, 3];
-numbers.reverse();
-console.log(numbers); //output: [3,2,1]
+//let number;
+do {
+    number = prompt("Please enter a number between 0 and 100");
+} while (!(number >= 0 && number < 100));
 
-//.sort()
-const number = [3, 1, 4, 2];
-number.sort();
-console.log(numbers); // output: [1,2,3,4]
-
-//.slice()
-const fruits = ["Apple", "Banana", "Orange", "Mango"];
-const sliced = fruits.slice(1, 3);
-console.log(sliced); // output: ["Banana" , "Mango"]
-console.log(fruits); //output:["Apple" , "Banana" , "Orange" , "Mango"];
-
-//.spilce()
-const fruits = ["Apple", "Banana", "Orange"];
-fruits.splice(1, 1, "Mango");
-console.log(fruits); // output: ["Apple" , "Mango" , "Orange"]
-
-//.concat()
-const arr1 = [1, 2];
-const arr2 = [3, 4];
-const combined = arr1.concat(arr2);
-console.log(combined); // output [1,2,3,4]
-
-//.forEach()
-const numbers = [1, 2, 3];
-numbers.forEachEach(function (num) {
-    console.log(num * 2);
-});
-output: 2, 4, 6
-
-//.map()
-const numbers = [1, 2, 3];
-const doubled = numbers.map(function (num) {
-    num * 2;
-});
-console.log(doubled);
-output: [2, 4, 6]
-
-//.filter()
-const ages = [15, 22, 18, 30, 12];
-const adults = ages.filter(finction(age)
+//for(let i = 0; i < 10;i++)
 {
-        return age >= 18;
-    });
-console.log(adults);
-output: [22, 18, 30]
+    console.log(i);
+}
 
+//let arr = [];
+for (let i = 0; i < 100; i++) {
+    Array.push(i);
+}
 
-    .find()
-const numbers = [4, 9, 16, 25];
-const found = numbers.find(function (num) {
-    return num > 10;
-});
-console.log(found);
-output: 16
+//Exercise 5.3
+const myWork = [];
+for (let i = 1; i <= 10; i++) {
+    let status = i % 2 === 0 ? true : false;
+    let lesson = {
+        name: 'lesson ${i}',
+        status: status
+    };
+    myWork.push(lesson);
+}
+console.log(myWork);
 
-//.every()
-const scores = [80, 90, 85];
-const allPassed = scores.every(function (score) {
-    return score >= 50;
-});
-output: true
-
-//.some()
-const scores = [40, 30, 50];
-const hasPasses = scores.some(function (score) {
-    return score >= 50;
-});
-console.log(hasPassed);
-output: true
-
-//.reduce()
-const numbers = [1, 2, 3, 4, 5];
-const sum = numbers.reduce(function (total, num) {
-    return total + sum;
-});
-console.log(num);
-output: 10
-
-//.shift()
-const fruits = ["Apple", "Banana", "Orange"];
-fruits.shift();
-console.log(fruits);
-output
-["Banana", "Orange"]
-
-
-//.unshift()
-const fruits = ["Apple", "Banana", "Orange"];
-fruits.unshift("Apple");
-console.log(fruits);
-output
-["Apple", "Banana", "Orange"]
-
-//.push()
-const fruits = ["Apple", "Banana"];
-fruits.push("Orange");
-console.log(fruits);
-output
-["Apple", "Banana", "Orange"]
-
-//.pop()
-const fruits = ["Apple", "Banana", "Orange"];
-fruits.pop();
-console.log("fruits");
-output
-["Apple", "Banana"]
+//let arrayOfArrays =[];
+for (let i = 0; i < 3; i++) {
+    arrOfArray.push([]);
+    for (let j = 0; j < 7; j++) {
+        arrOfArrays[i].push(j);
+    }
+}
+console.log(arrOfArrays);
+console.table(arrOfArrays);
