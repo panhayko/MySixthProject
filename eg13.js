@@ -49,4 +49,19 @@ prompt("argument here too");
 let arr = [];
 arr.push("argument");
 
+let resultsArr = [];
+for (let i = 0; i < 10; i++) {
+    let result = addTwoNumber(i, 2 * i);
+    resultsArr.push(result);
+}
+console.log(resultsArr);
+
+let addTwoNumbers = (x, y) => x + y;
+let result = addTwoNumbers(12, 15);
+console.log(result);
+
+let addTwoNumbers = (x, y) => {
+    console.log("Adding");
+    return x + y;
+}
 
